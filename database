@@ -1,1 +1,140 @@
-database
+DROP DATABASE IF EXISTS faculty_system;
+CREATE DATABASE faculty_system CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE faculty_system;
+
+-- USER (base entity via ISA)
+CREATE TABLE USER (
+    User_id     INT AUTO_INCREMENT PRIMARY KEY,
+    U_name      VARCHAR(50) UNIQUE NOT NULL,
+    Email       VARCHAR(100) UNIQUE NOT NULL,
+    Password    VARCHAR(255) NOT NULL,
+    Name        VARCHAR(100) NOT NULL,
+    Address     VARCHAR(255),
+    Role        ENUM('Admin','Lecturer','Student','TechnicalOfficer') NOT NULL
+);
+
+-- ADMIN
+CREATE TABLE ADMIN (
+    Admin_id    INT AUTO_INCREMENT PRIMARY KEY,
+    User_id     INT UNIQUE NOT NULL,
+    FOREIGN KEY (User_id) REFERENCES USER(User_id) ON DELETE CASCADE
+);
+
+-- LECTURE (Lecturer)
+CREATE TABLE LECTURE (
+    Lec_id      INT AUTO_INCREMENT PRIMARY KEY,
+    User_id     INT UNIQUE NOT NULL,
+    Department  VARCHAR(100),
+    FOREIGN KEY (User_id) REFERENCES USER(User_id) ON DELETE CASCADE
+);
+ 
+-- TECHNICAL_OFFICER
+CREATE TABLE TECHNICAL_OFFICER (
+    To_id       INT AUTO_INCREMENT PRIMARY KEY,
+    User_id     INT UNIQUE NOT NULL,
+    Dep         VARCHAR(100),
+    FOREIGN KEY (User_id) REFERENCES USER(User_id) ON DELETE CASCADE
+);
+
+-- COURSE
+CREATE TABLE COURSE (
+    Course_id   INT AUTO_INCREMENT PRIMARY KEY,
+    Course_code VARCHAR(20) UNIQUE NOT NULL,
+    Name        VARCHAR(100) NOT NULL,
+    Credit      INT NOT NULL,
+    Department  VARCHAR(100),
+    Has_Theory  BOOLEAN DEFAULT TRUE,
+    Has_Practical BOOLEAN DEFAULT FALSE
+);
+ 
+-- STUDENT
+CREATE TABLE STUDENT (
+    Stu_id          INT AUTO_INCREMENT PRIMARY KEY,
+    User_id         INT UNIQUE NOT NULL,
+    Reg_number      VARCHAR(20) UNIQUE NOT NULL,
+    Batch           VARCHAR(10) NOT NULL,
+    Is_Repeat       BOOLEAN DEFAULT FALSE,
+    Profile_picture VARCHAR(255),
+    Contact         VARCHAR(20),
+    FOREIGN KEY (User_id) REFERENCES USER(User_id) ON DELETE CASCADE
+);
+-- STUDENT_COURSE (Engage: M:M Student <-> Course)
+CREATE TABLE STUDENT_COURSE (
+    Stu_id      INT NOT NULL,
+    Course_id   INT NOT NULL,
+    PRIMARY KEY (Stu_id, Course_id),
+    FOREIGN KEY (Stu_id)    REFERENCES STUDENT(Stu_id) ON DELETE CASCADE,
+    FOREIGN KEY (Course_id) REFERENCES COURSE(Course_id) ON DELETE CASCADE
+);
+ 
+-- TIMETABLE (TIME_TABLE)
+CREATE TABLE TIME_TABLE (
+    T_id        INT AUTO_INCREMENT PRIMARY KEY,
+    Course_id   INT NOT NULL,
+    Dep         VARCHAR(100),
+    Day         VARCHAR(15) NOT NULL,
+    Time        TIME NOT NULL,
+    Duration    INT NOT NULL COMMENT 'minutes',
+    Session_type ENUM('Theory','Practical') DEFAULT 'Theory',
+    Room        VARCHAR(50),
+    FOREIGN KEY (Course_id) REFERENCES COURSE(Course_id) ON DELETE CASCADE
+);
+-- NOTICE
+CREATE TABLE NOTICE (
+    N_id        INT AUTO_INCREMENT PRIMARY KEY,
+    Title       VARCHAR(200) NOT NULL,
+    Content     TEXT NOT NULL,
+    Date        DATE NOT NULL,
+    Dep         VARCHAR(100),
+    Admin_id    INT NOT NULL,
+    FOREIGN KEY (Admin_id) REFERENCES ADMIN(Admin_id) ON DELETE CASCADE
+);
+ 
+-- ATTENDANCE
+CREATE TABLE ATTENDANCE (
+    At_id       INT AUTO_INCREMENT PRIMARY KEY,
+    Stu_id      INT NOT NULL,
+    Course_id   INT NOT NULL,
+    Date        DATE NOT NULL,
+    Status      ENUM('Present','Absent') NOT NULL DEFAULT 'Absent',
+    Session_type ENUM('Theory','Practical') DEFAULT 'Theory',
+    To_id       INT,
+    FOREIGN KEY (Stu_id)    REFERENCES STUDENT(Stu_id) ON DELETE CASCADE,
+    FOREIGN KEY (Course_id) REFERENCES COURSE(Course_id) ON DELETE CASCADE,
+    FOREIGN KEY (To_id)     REFERENCES TECHNICAL_OFFICER(To_id) ON DELETE SET NULL
+);
+
+-- MEDICAL
+CREATE TABLE MEDICAL (
+    Med_id      INT AUTO_INCREMENT PRIMARY KEY,
+    Stu_id      INT NOT NULL,
+    Date        DATE NOT NULL,
+    Document    VARCHAR(255),
+    Status      ENUM('Pending','Approved','Rejected') DEFAULT 'Pending',
+    To_id       INT,
+    FOREIGN KEY (Stu_id) REFERENCES STUDENT(Stu_id) ON DELETE CASCADE,
+    FOREIGN KEY (To_id)  REFERENCES TECHNICAL_OFFICER(To_id) ON DELETE SET NULL
+);
+
+-- MARKS
+CREATE TABLE MARKS (
+    Marks_id    INT AUTO_INCREMENT PRIMARY KEY,
+    Stu_id      INT NOT NULL,
+    Course_id   INT NOT NULL,
+    Assignment  DECIMAL(5,2) DEFAULT 0  COMMENT 'out of 100',
+    Quiz        DECIMAL(5,2) DEFAULT 0  COMMENT 'out of 100',
+    Mid         DECIMAL(5,2) DEFAULT 0  COMMENT 'out of 100',
+    End         DECIMAL(5,2) DEFAULT 0  COMMENT 'out of 100',
+    CA_Total    DECIMAL(5,2) GENERATED ALWAYS AS (
+                    ROUND((Assignment * 0.20) + (Quiz * 0.20) + (Mid * 0.60), 2)
+                ) STORED COMMENT 'CA = 20% Assign + 20% Quiz + 60% Mid',
+    Final_Total DECIMAL(5,2) GENERATED ALWAYS AS (
+                    ROUND(((Assignment * 0.20 + Quiz * 0.20 + Mid * 0.60) * 0.40) + (End * 0.60), 2)
+                ) STORED COMMENT 'Final = 40% CA + 60% End',
+    Lec_id      INT,
+    FOREIGN KEY (Stu_id)    REFERENCES STUDENT(Stu_id) ON DELETE CASCADE,
+    FOREIGN KEY (Course_id) REFERENCES COURSE(Course_id) ON DELETE CASCADE,
+    FOREIGN KEY (Lec_id)    REFERENCES LECTURE(Lec_id) ON DELETE SET NULL,
+    UNIQUE KEY uq_marks (Stu_id, Course_id)
+);
+
