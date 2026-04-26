@@ -1,0 +1,426 @@
+INSERT INTO USER (User_id,U_name,Email,Password,Name,Address,Role) VALUES
+(1,'admin01','admin01@faculty.lk','pass123','Nimal Perera','Colombo','Admin'),
+(2,'lec01','lec01@faculty.lk','pass123','Kamal Silva','Colombo','Lecturer'),
+(3,'lec02','lec02@faculty.lk','pass123','Ruwan Fernando','Gampaha','Lecturer'),
+(4,'lec03','lec03@faculty.lk','pass123','Ishara Jayasinghe','Kandy','Lecturer'),
+(5,'lec04','lec04@faculty.lk','pass123','Nadeeka Wickramasinghe','Galle','Lecturer'),
+(6,'lec05','lec05@faculty.lk','pass123','Sampath Dias','Kurunegala','Lecturer'),
+(7,'to01','to01@faculty.lk','pass123','Chamara Perera','Colombo','TechnicalOfficer'),
+(8,'to02','to02@faculty.lk','pass123','Tharindu Jayawardena','Kegalle','TechnicalOfficer'),
+(9,'to03','to03@faculty.lk','pass123','Dilini Abeysekara','Matara','TechnicalOfficer'),
+(10,'to04','to04@faculty.lk','pass123','Sanjeewa Rathnayake','Jaffna','TechnicalOfficer'),
+(11,'stu01','stu01@faculty.lk','pass123','Asha Fonseka','Colombo','Student'),
+(12,'stu02','stu02@faculty.lk','pass123','Chathu Perera','Gampaha','Student'),
+(13,'stu03','stu03@faculty.lk','pass123','Dulakshi Silva','Kalutara','Student'),
+(14,'stu04','stu04@faculty.lk','pass123','Eranga Fernando','Kandy','Student'),
+(15,'stu05','stu05@faculty.lk','pass123','Fathima Riyas','Matale','Student'),
+(16,'stu06','stu06@faculty.lk','pass123','Gayan Wickramarathna','Galle','Student'),
+(17,'stu07','stu07@faculty.lk','pass123','Hansi Jayasinghe','Matara','Student'),
+(18,'stu08','stu08@faculty.lk','pass123','Isuru Perera','Kurunegala','Student'),
+(19,'stu09','stu09@faculty.lk','pass123','Janani De Silva','Puttalam','Student'),
+(20,'stu10','stu10@faculty.lk','pass123','Kavindu Mendis','Badulla','Student'),
+(21,'stu11','stu11@faculty.lk','pass123','Lakshika Rajapaksha','Anuradhapura','Student'),
+(22,'stu12','stu12@faculty.lk','pass123','Malith Bandara','Monaragala','Student'),
+(23,'stu13','stu13@faculty.lk','pass123','Nethmi Abeywickrama','Ratnapura','Student'),
+(24,'stu14','stu14@faculty.lk','pass123','Oshada Wijesinghe','Hambantota','Student'),
+(25,'stu15','stu15@faculty.lk','pass123','Praveen Gamage','Mannar','Student'),
+(26,'stu16','stu16@faculty.lk','pass123','Queenie Samarasinghe','Vavuniya','Student'),
+(27,'stu17','stu17@faculty.lk','pass123','Rashmi Nirosha','Trincomalee','Student'),
+(28,'stu18','stu18@faculty.lk','pass123','Sahan Chamikara','Batticaloa','Student'),
+(29,'stu19','stu19@faculty.lk','pass123','Tharushi Nadeeshani','Polonnaruwa','Student'),
+(30,'stu20','stu20@faculty.lk','pass123','Udara Lakmali','Colombo','Student');
+
+INSERT INTO ADMIN (Admin_id,User_id) VALUES (1,1);
+
+INSERT INTO LECTURE (Lec_id,User_id,Department) VALUES
+(1,2,'ICT'),
+(2,3,'Software'),
+(3,4,'Mathematics'),
+(4,5,'Electronics'),
+(5,6,'English');
+
+INSERT INTO TECHNICAL_OFFICER (To_id,User_id,Dep) VALUES
+(1,7,'ICT'),
+(2,8,'Software'),
+(3,9,'Electronics'),
+(4,10,'General');
+
+INSERT INTO COURSE (Course_id,Course_code,Name,Credit,Department,Has_Theory,Has_Practical) VALUES
+(1,'ICT2132','Object Oriented Programming Practicum',2,'ICT',TRUE,TRUE),
+(2,'ICT2142','Database Systems',2,'ICT',TRUE,TRUE),
+(3,'ICT2153','Web Programming',3,'ICT',TRUE,TRUE),
+(4,'ICT2162','Computer Networks',2,'ICT',TRUE,FALSE),
+(5,'ICT2171','Professional Development',1,'ICT',TRUE,FALSE),
+(6,'ICT2182','Software Engineering',2,'Software',TRUE,FALSE),
+(7,'ICT2192','Mathematics for Computing',2,'Mathematics',TRUE,FALSE),
+(8,'ICT2201','English for ICT',1,'English',TRUE,FALSE);
+
+INSERT INTO STUDENT (Stu_id,User_id,Reg_number,Batch,Is_Repeat,Profile_picture,Contact) VALUES
+(1,11,'2023/ICT/001','2023',FALSE,NULL,'0711111111'),
+(2,12,'2023/ICT/002','2023',FALSE,NULL,'0711111112'),
+(3,13,'2023/ICT/003','2023',FALSE,NULL,'0711111113'),
+(4,14,'2023/ICT/004','2023',FALSE,NULL,'0711111114'),
+(5,15,'2023/ICT/005','2023',FALSE,NULL,'0711111115'),
+(6,16,'2023/ICT/006','2023',FALSE,NULL,'0711111116'),
+(7,17,'2023/ICT/007','2023',FALSE,NULL,'0711111117'),
+(8,18,'2023/ICT/008','2023',FALSE,NULL,'0711111118'),
+(9,19,'2023/ICT/009','2023',FALSE,NULL,'0711111119'),
+(10,20,'2023/ICT/010','2023',TRUE,NULL,'0711111120'),
+(11,21,'2022/ICT/011','2022',FALSE,NULL,'0711111121'),
+(12,22,'2022/ICT/012','2022',FALSE,NULL,'0711111122'),
+(13,23,'2022/ICT/013','2022',TRUE,NULL,'0711111123'),
+(14,24,'2022/ICT/014','2022',FALSE,NULL,'0711111124'),
+(15,25,'2022/ICT/015','2022',FALSE,NULL,'0711111125'),
+(16,26,'2021/ICT/016','2021',FALSE,NULL,'0711111126'),
+(17,27,'2021/ICT/017','2021',FALSE,NULL,'0711111127'),
+(18,28,'2021/ICT/018','2021',TRUE,NULL,'0711111128'),
+(19,29,'2021/ICT/019','2021',FALSE,NULL,'0711111129'),
+(20,30,'2021/ICT/020','2021',FALSE,NULL,'0711111130');
+
+INSERT INTO STUDENT_COURSE (Stu_id,Course_id) VALUES
+(1,1),(1,2),(1,3),(1,4),(1,5),(1,6),(1,7),(1,8),
+(2,1),(2,2),(2,3),(2,4),(2,5),(2,6),(2,7),(2,8),
+(3,1),(3,2),(3,3),(3,4),(3,5),(3,6),(3,7),(3,8),
+(4,1),(4,2),(4,3),(4,4),(4,5),(4,6),(4,7),(4,8),
+(5,1),(5,2),(5,3),(5,4),(5,5),(5,6),(5,7),(5,8),
+(6,1),(6,2),(6,3),(6,4),(6,5),(6,6),(6,7),(6,8),
+(7,1),(7,2),(7,3),(7,4),(7,5),(7,6),(7,7),(7,8),
+(8,1),(8,2),(8,3),(8,4),(8,5),(8,6),(8,7),(8,8),
+(9,1),(9,2),(9,3),(9,4),(9,5),(9,6),(9,7),(9,8),
+(10,1),(10,2),(10,3),(10,4),(10,5),(10,6),(10,7),(10,8),
+(11,1),(11,2),(11,3),(11,4),(11,5),(11,6),(11,7),(11,8),
+(12,1),(12,2),(12,3),(12,4),(12,5),(12,6),(12,7),(12,8),
+(13,1),(13,2),(13,3),(13,4),(13,5),(13,6),(13,7),(13,8),
+(14,1),(14,2),(14,3),(14,4),(14,5),(14,6),(14,7),(14,8),
+(15,1),(15,2),(15,3),(15,4),(15,5),(15,6),(15,7),(15,8),
+(16,1),(16,2),(16,3),(16,4),(16,5),(16,6),(16,7),(16,8),
+(17,1),(17,2),(17,3),(17,4),(17,5),(17,6),(17,7),(17,8),
+(18,1),(18,2),(18,3),(18,4),(18,5),(18,6),(18,7),(18,8),
+(19,1),(19,2),(19,3),(19,4),(19,5),(19,6),(19,7),(19,8),
+(20,1),(20,2),(20,3),(20,4),(20,5),(20,6),(20,7),(20,8);
+
+INSERT INTO TIME_TABLE (T_id,Course_id,Dep,Day,Time,Duration,Session_type,Room) VALUES
+(1,1,'ICT','Monday','08:00:00',120,'Theory','ICT-L1'),
+(2,1,'ICT','Tuesday','13:00:00',120,'Practical','LAB-1'),
+(3,2,'ICT','Monday','10:00:00',120,'Theory','ICT-L2'),
+(4,2,'ICT','Wednesday','13:00:00',120,'Practical','LAB-2'),
+(5,3,'ICT','Tuesday','08:00:00',120,'Theory','ICT-L1'),
+(6,3,'ICT','Thursday','13:00:00',120,'Practical','LAB-1'),
+(7,4,'ICT','Wednesday','08:00:00',120,'Theory','ICT-L3'),
+(8,5,'ICT','Thursday','08:00:00',120,'Theory','ICT-L3'),
+(9,6,'Software','Friday','08:00:00',120,'Theory','SOFT-L1'),
+(10,7,'Mathematics','Friday','10:00:00',120,'Theory','MATH-L1'),
+(11,8,'English','Friday','13:00:00',120,'Theory','ENG-L1');
+
+INSERT INTO NOTICE (N_id,Title,Content,Date,Dep,Admin_id) VALUES
+(1,'Semester Start','Semester teaching begins next Monday.','2026-01-05','ICT',1),
+(2,'Attendance Rule','Students must maintain at least 80% attendance.','2026-01-10','ICT',1),
+(3,'Medical Submission','Upload medicals within 3 days of absence.','2026-01-15','ICT',1);
+
+INSERT INTO MEDICAL (Med_id,Stu_id,Date,Document,Status,To_id) VALUES
+(1,3,'2026-02-10','medical_3.pdf','Approved',1),
+(2,5,'2026-02-15','medical_5.pdf','Pending',2),
+(3,7,'2026-03-05','medical_7.pdf','Rejected',3),
+(4,12,'2026-02-18','medical_12.pdf','Approved',4),
+(5,14,'2026-03-01','medical_14.pdf','Pending',1),
+(6,18,'2026-03-10','medical_18.pdf','Approved',2);
+
+INSERT INTO ATTENDANCE (Stu_id,Course_id,Date,Status,Session_type,To_id) VALUES
+(1,1,'2026-01-06','Present','Theory',1),
+(1,1,'2026-01-13','Present','Theory',1),
+(1,1,'2026-01-20','Present','Theory',1),
+(1,1,'2026-01-27','Present','Theory',1),
+(1,1,'2026-02-03','Present','Theory',1),
+(1,1,'2026-02-10','Present','Theory',1),
+(1,1,'2026-02-17','Present','Theory',1),
+(1,1,'2026-02-24','Present','Theory',1),
+(1,1,'2026-03-03','Present','Theory',1),
+(1,1,'2026-03-10','Present','Theory',1),
+(1,1,'2026-03-17','Present','Theory',1),
+(1,1,'2026-03-24','Present','Theory',1),
+(1,1,'2026-03-31','Present','Theory',1),
+(1,1,'2026-01-07','Present','Practical',2),
+(1,1,'2026-01-14','Present','Practical',2),
+(1,1,'2026-01-21','Present','Practical',2),
+(1,1,'2026-01-28','Present','Practical',2),
+(1,1,'2026-02-04','Present','Practical',2),
+(1,1,'2026-02-11','Present','Practical',2),
+(1,1,'2026-02-18','Present','Practical',2),
+(1,1,'2026-02-25','Present','Practical',2),
+(1,1,'2026-03-04','Present','Practical',2),
+(1,1,'2026-03-11','Present','Practical',2),
+(1,1,'2026-03-18','Present','Practical',2),
+(1,1,'2026-03-25','Present','Practical',2),
+(1,1,'2026-04-01','Present','Practical',2),
+(1,1,'2026-04-08','Present','Practical',2),
+
+(2,2,'2026-01-06','Present','Theory',1),
+(2,2,'2026-01-13','Present','Theory',1),
+(2,2,'2026-01-20','Present','Theory',1),
+(2,2,'2026-01-27','Present','Theory',1),
+(2,2,'2026-02-03','Present','Theory',1),
+(2,2,'2026-02-10','Present','Theory',1),
+(2,2,'2026-02-17','Present','Theory',1),
+(2,2,'2026-02-24','Present','Theory',1),
+(2,2,'2026-03-03','Present','Theory',1),
+(2,2,'2026-03-10','Present','Theory',1),
+(2,2,'2026-03-17','Present','Theory',1),
+(2,2,'2026-03-24','Present','Theory',1),
+(2,2,'2026-03-31','Absent','Theory',1),
+(2,2,'2026-04-07','Absent','Theory',1),
+(2,2,'2026-04-14','Present','Theory',1),
+
+(3,3,'2026-01-07','Present','Practical',2),
+(3,3,'2026-01-14','Present','Practical',2),
+(3,3,'2026-01-21','Present','Practical',2),
+(3,3,'2026-01-28','Present','Practical',2),
+(3,3,'2026-02-04','Present','Practical',2),
+(3,3,'2026-02-11','Absent','Practical',2),
+(3,3,'2026-02-18','Present','Practical',2),
+(3,3,'2026-02-25','Absent','Practical',2),
+(3,3,'2026-03-04','Present','Practical',2),
+(3,3,'2026-03-11','Present','Practical',2),
+(3,3,'2026-03-18','Absent','Practical',2),
+(3,3,'2026-03-25','Present','Practical',2),
+(3,3,'2026-04-01','Absent','Practical',2),
+(3,3,'2026-04-08','Present','Practical',2),
+(3,3,'2026-04-15','Absent','Practical',2),
+
+(4,4,'2026-01-06','Present','Theory',1),
+(4,4,'2026-01-13','Present','Theory',1),
+(4,4,'2026-01-20','Present','Theory',1),
+(4,4,'2026-01-27','Present','Theory',1),
+(4,4,'2026-02-03','Present','Theory',1),
+(4,4,'2026-02-10','Present','Theory',1),
+(4,4,'2026-02-17','Present','Theory',1),
+(4,4,'2026-02-24','Present','Theory',1),
+(4,4,'2026-03-03','Absent','Theory',1),
+(4,4,'2026-03-10','Present','Theory',1),
+(4,4,'2026-03-17','Present','Theory',1),
+(4,4,'2026-03-24','Present','Theory',1),
+(4,4,'2026-03-31','Present','Theory',1),
+(4,4,'2026-04-07','Present','Theory',1),
+(4,4,'2026-04-14','Present','Theory',1),
+
+(5,5,'2026-01-06','Present','Theory',1),
+(5,5,'2026-01-13','Present','Theory',1),
+(5,5,'2026-01-20','Absent','Theory',1),
+(5,5,'2026-01-27','Present','Theory',1),
+(5,5,'2026-02-03','Absent','Theory',1),
+(5,5,'2026-02-10','Present','Theory',1),
+(5,5,'2026-02-17','Present','Theory',1),
+(5,5,'2026-02-24','Absent','Theory',1),
+(5,5,'2026-03-03','Present','Theory',1),
+(5,5,'2026-03-10','Present','Theory',1),
+(5,5,'2026-03-17','Absent','Theory',1),
+(5,5,'2026-03-24','Present','Theory',1),
+(5,5,'2026-03-31','Present','Theory',1),
+(5,5,'2026-04-07','Absent','Theory',1),
+(5,5,'2026-04-14','Present','Theory',1),
+
+(6,6,'2026-01-06','Present','Theory',1),
+(6,6,'2026-01-13','Present','Theory',1),
+(6,6,'2026-01-20','Present','Theory',1),
+(6,6,'2026-01-27','Present','Theory',1),
+(6,6,'2026-02-03','Present','Theory',1),
+(6,6,'2026-02-10','Present','Theory',1),
+(6,6,'2026-02-17','Present','Theory',1),
+(6,6,'2026-02-24','Present','Theory',1),
+(6,6,'2026-03-03','Absent','Theory',1),
+(6,6,'2026-03-10','Present','Theory',1),
+(6,6,'2026-03-17','Present','Theory',1),
+(6,6,'2026-03-24','Present','Theory',1),
+(6,6,'2026-03-31','Present','Theory',1),
+(6,6,'2026-04-07','Present','Theory',1),
+(6,6,'2026-04-14','Present','Theory',1),
+
+(7,7,'2026-01-06','Present','Theory',1),
+(7,7,'2026-01-13','Absent','Theory',1),
+(7,7,'2026-01-20','Present','Theory',1),
+(7,7,'2026-01-27','Absent','Theory',1),
+(7,7,'2026-02-03','Present','Theory',1),
+(7,7,'2026-02-10','Present','Theory',1),
+(7,7,'2026-02-17','Absent','Theory',1),
+(7,7,'2026-02-24','Present','Theory',1),
+(7,7,'2026-03-03','Present','Theory',1),
+(7,7,'2026-03-10','Absent','Theory',1),
+(7,7,'2026-03-17','Present','Theory',1),
+(7,7,'2026-03-24','Present','Theory',1),
+(7,7,'2026-03-31','Absent','Theory',1),
+(7,7,'2026-04-07','Present','Theory',1),
+(7,7,'2026-04-14','Present','Theory',1),
+
+(8,8,'2026-01-06','Present','Theory',1),
+(8,8,'2026-01-13','Present','Theory',1),
+(8,8,'2026-01-20','Present','Theory',1),
+(8,8,'2026-01-27','Present','Theory',1),
+(8,8,'2026-02-03','Present','Theory',1),
+(8,8,'2026-02-10','Present','Theory',1),
+(8,8,'2026-02-17','Present','Theory',1),
+(8,8,'2026-02-24','Present','Theory',1),
+(8,8,'2026-03-03','Present','Theory',1),
+(8,8,'2026-03-10','Present','Theory',1),
+(8,8,'2026-03-17','Present','Theory',1),
+(8,8,'2026-03-24','Present','Theory',1),
+(8,8,'2026-03-31','Present','Theory',1),
+(8,8,'2026-04-07','Absent','Theory',1),
+(8,8,'2026-04-14','Absent','Theory',1),
+
+(9,1,'2026-01-06','Present','Theory',1),
+(9,1,'2026-01-13','Present','Theory',1),
+(9,1,'2026-01-20','Present','Theory',1),
+(9,1,'2026-01-27','Present','Theory',1),
+(9,1,'2026-02-03','Present','Theory',1),
+(9,1,'2026-02-10','Present','Theory',1),
+(9,1,'2026-02-17','Present','Theory',1),
+(9,1,'2026-02-24','Present','Theory',1),
+(9,1,'2026-03-03','Present','Theory',1),
+(9,1,'2026-03-10','Present','Theory',1),
+(9,1,'2026-03-17','Absent','Theory',1),
+(9,1,'2026-03-24','Absent','Theory',1),
+(9,1,'2026-03-31','Present','Theory',1),
+(9,1,'2026-04-07','Present','Theory',1),
+(9,1,'2026-04-14','Present','Theory',1),
+
+(10,2,'2026-01-06','Present','Theory',1),
+(10,2,'2026-01-13','Present','Theory',1),
+(10,2,'2026-01-20','Present','Theory',1),
+(10,2,'2026-01-27','Present','Theory',1),
+(10,2,'2026-02-03','Absent','Theory',1),
+(10,2,'2026-02-10','Absent','Theory',1),
+(10,2,'2026-02-17','Present','Theory',1),
+(10,2,'2026-02-24','Present','Theory',1),
+(10,2,'2026-03-03','Present','Theory',1),
+(10,2,'2026-03-10','Present','Theory',1),
+(10,2,'2026-03-17','Absent','Theory',1),
+(10,2,'2026-03-24','Present','Theory',1),
+(10,2,'2026-03-31','Present','Theory',1),
+(10,2,'2026-04-07','Present','Theory',1),
+(10,2,'2026-04-14','Absent','Theory',1);
+
+INSERT INTO MARKS (Marks_id,Stu_id,Course_id,Assignment,Quiz,Mid,End,Lec_id) VALUES
+(1,1,1,85,90,88,86,1),
+(2,2,2,70,72,68,74,2),
+(3,3,3,45,55,50,58,2),
+(4,4,4,80,82,84,79,3),
+(5,5,5,35,40,42,50,5),
+(6,6,6,78,80,76,81,2),
+(7,7,7,60,62,58,64,3),
+(8,8,8,90,88,92,91,5),
+(9,9,1,55,58,52,57,1),
+(10,10,2,40,41,39,45,2),
+(11,11,3,83,85,80,84,2),
+(12,12,4,67,70,65,68,3),
+(13,13,5,48,50,45,52,5),
+(14,14,6,72,74,70,73,2),
+(15,15,7,88,86,90,87,3),
+(16,16,8,59,61,57,60,5),
+(17,17,1,64,66,62,65,1),
+(18,18,2,77,79,75,78,2),
+(19,19,3,95,93,96,94,2),
+(20,20,4,52,54,50,55,3);
+
+SET FOREIGN_KEY_CHECKS=1;
+
+DROP VIEW IF EXISTS vw_attendance_summary;
+CREATE VIEW vw_attendance_summary AS
+SELECT s.Batch, sc.Course_id, c.Course_code, c.Name AS Course_Name, a.Session_type,
+       s.Stu_id, u.Name AS Student_Name,
+       SUM(a.Status='Present') AS Present_Count,
+       SUM(a.Status='Absent') AS Absent_Count,
+       COUNT(*) AS Total_Sessions,
+       ROUND(SUM(a.Status='Present')*100/COUNT(*),2) AS Attendance_Percentage
+FROM ATTENDANCE a
+JOIN STUDENT s ON s.Stu_id=a.Stu_id
+JOIN USER u ON u.User_id=s.User_id
+JOIN COURSE c ON c.Course_id=a.Course_id
+JOIN STUDENT_COURSE sc ON sc.Stu_id=s.Stu_id AND sc.Course_id=a.Course_id
+GROUP BY s.Batch, sc.Course_id, c.Course_code, c.Name, a.Session_type, s.Stu_id, u.Name;
+
+DROP VIEW IF EXISTS vw_ca_summary;
+CREATE VIEW vw_ca_summary AS
+SELECT s.Batch, s.Stu_id, u.Name AS Student_Name, m.Course_id, c.Course_code, c.Name AS Course_Name,
+       m.Assignment, m.Quiz, m.Mid, m.CA_Total,
+       CASE WHEN m.CA_Total >= 40 THEN 'Eligible' ELSE 'Not Eligible' END AS CA_Eligibility
+FROM MARKS m
+JOIN STUDENT s ON s.Stu_id=m.Stu_id
+JOIN USER u ON u.User_id=s.User_id
+JOIN COURSE c ON c.Course_id=m.Course_id;
+
+DROP VIEW IF EXISTS vw_final_marks;
+CREATE VIEW vw_final_marks AS
+SELECT s.Batch, s.Stu_id, u.Name AS Student_Name, m.Course_id, c.Course_code, c.Name AS Course_Name,
+       m.Final_Total
+FROM MARKS m
+JOIN STUDENT s ON s.Stu_id=m.Stu_id
+JOIN USER u ON u.User_id=s.User_id
+JOIN COURSE c ON c.Course_id=m.Course_id;
+
+DROP VIEW IF EXISTS vw_grades;
+CREATE VIEW vw_grades AS
+SELECT s.Batch, s.Stu_id, u.Name AS Student_Name, m.Course_id, c.Course_code, c.Name AS Course_Name,
+       m.Final_Total,
+       CASE
+         WHEN m.Final_Total >= 85 THEN 'A+'
+         WHEN m.Final_Total >= 75 THEN 'A'
+         WHEN m.Final_Total >= 70 THEN 'A-'
+         WHEN m.Final_Total >= 65 THEN 'B+'
+         WHEN m.Final_Total >= 60 THEN 'B'
+         WHEN m.Final_Total >= 55 THEN 'B-'
+         WHEN m.Final_Total >= 50 THEN 'C+'
+         WHEN m.Final_Total >= 45 THEN 'C'
+         WHEN m.Final_Total >= 40 THEN 'C-'
+         WHEN m.Final_Total >= 35 THEN 'D+'
+         WHEN m.Final_Total >= 30 THEN 'D'
+         ELSE 'E'
+       END AS Grade,
+       CASE
+         WHEN m.Final_Total >= 85 THEN 4.00
+         WHEN m.Final_Total >= 75 THEN 3.70
+         WHEN m.Final_Total >= 70 THEN 3.30
+         WHEN m.Final_Total >= 65 THEN 3.00
+         WHEN m.Final_Total >= 60 THEN 2.70
+         WHEN m.Final_Total >= 55 THEN 2.30
+         WHEN m.Final_Total >= 50 THEN 2.00
+         WHEN m.Final_Total >= 45 THEN 1.70
+         WHEN m.Final_Total >= 40 THEN 1.30
+         WHEN m.Final_Total >= 35 THEN 1.00
+         WHEN m.Final_Total >= 30 THEN 0.70
+         ELSE 0.00
+       END AS Grade_Point
+FROM MARKS m
+JOIN STUDENT s ON s.Stu_id=m.Stu_id
+JOIN USER u ON u.User_id=s.User_id
+JOIN COURSE c ON c.Course_id=m.Course_id;
+
+DROP VIEW IF EXISTS vw_sgpa_cgpa;
+CREATE VIEW vw_sgpa_cgpa AS
+SELECT x.Batch, x.Stu_id, x.Student_Name,
+       ROUND(SUM(x.Grade_Point * x.Credit)/SUM(x.Credit),2) AS SGPA,
+       ROUND(AVG(x.Grade_Point),2) AS CGPA
+FROM (
+  SELECT g.Batch, g.Stu_id, g.Student_Name, g.Course_id, g.Grade_Point, c.Credit
+  FROM vw_grades g
+  JOIN COURSE c ON c.Course_id=g.Course_id
+) x
+GROUP BY x.Batch, x.Stu_id, x.Student_Name;
+
+DROP VIEW IF EXISTS vw_exam_eligibility;
+CREATE VIEW vw_exam_eligibility AS
+SELECT s.Batch, s.Stu_id, u.Name AS Student_Name, m.Course_id, c.Course_code, c.Name AS Course_Name,
+       ROUND(SUM(CASE WHEN a.Status='Present' THEN 1 ELSE 0 END)*100/COUNT(*),2) AS Attendance_Percentage,
+       m.CA_Total,
+       CASE WHEN ROUND(SUM(CASE WHEN a.Status='Present' THEN 1 ELSE 0 END)*100/COUNT(*),2) >= 80 AND m.CA_Total >= 40 THEN 'Eligible' ELSE 'Not Eligible' END AS Final_Eligibility
+FROM ATTENDANCE a
+JOIN STUDENT s ON s.Stu_id=a.Stu_id
+JOIN USER u ON u.User_id=s.User_id
+JOIN MARKS m ON m.Stu_id=s.Stu_id AND m.Course_id=a.Course_id
+JOIN COURSE c ON c.Course_id=m.Course_id
+GROUP BY s.Batch, s.Stu_id, u.Name, m.Course_id, c.Course_code, c.Name, m.CA_Total;
+
+SELECT * FROM vw_attendance_summary;
+SELECT * FROM vw_ca_summary;
+SELECT * FROM vw_exam_eligibility;
+SELECT * FROM vw_final_marks;
+SELECT * FROM vw_grades;
+SELECT * FROM vw_sgpa_cgpa;

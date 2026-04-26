@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="admin.AddUserProfile">
+  <grid id="27dc6" binding="MainPanel" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="20" left="20" bottom="20" right="20"/>
+    <constraints>
+      <xy x="0" y="0" width="500" height="500"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+
+      <!-- Title -->
+      <component id="lbl00" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font size="24" style="1"/>
+          <foreground color="-1"/>
+          <text value="Add User Profile"/>
+        </properties>
+      </component>
+
+      <!-- Detail Panel -->
+      <grid id="detailGrid" binding="DetailPanel" layout-manager="GridLayoutManager" row-count="15" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="8" vgap="8">
+        <margin top="10" left="10" bottom="10" right="10"/>
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+
+          <!-- Username -->
+          <component id="lbl01" class="javax.swing.JLabel">
+            <constraints><grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/></constraints>
+            <properties><foreground color="-1"/><font size="14" style="1"/><text value="Username"/></properties>
+          </component>
+          <component id="txt01" class="javax.swing.JTextField" binding="textField1" default-binding="true">
+            <constraints><grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"><preferred-size width="180" height="30"/></grid></constraints>
+            <properties/>
+          </component>
+
+          <!-- First Name -->
+          <component id="lbl02" class="javax.swing.JLabel">
+            <constraints><grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/></constraints>
+            <properties><foreground color="-1"/><font size="14" style="1"/><text value="First Name"/></properties>
+          </component>
+          <component id="txt02" class="javax.swing.JTextField" binding="textField2" default-binding="true">
+            <constraints><grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"><preferred-size width="180" height="30"/></grid></constraints>
+            <properties/>
+          </component>
+
+          <!-- Last Name -->
+          <component id="lbl03" class="javax.swing.JLabel">
+            <constraints><grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/></constraints>
+            <properties><foreground color="-1"/><font size="14" style="1"/><text value="Last Name"/></properties>
+          </component>
+          <component id="txt03" class="javax.swing.JTextField" binding="textField3" default-binding="true">
+            <constraints><grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"><preferred-size width="180" height="30"/></grid></constraints>
+            <properties/>
+          </component>
+
+          <!-- Date of Birth -->
+          <component id="lbl04" class="javax.swing.JLabel">
+            <constraints><grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/></constraints>
+            <properties><foreground color="-1"/><font size="14" style="1"/><text value="Date of Birth"/></properties>
+          </component>
+          <component id="txt04" class="javax.swing.JTextField" binding="textField4" default-binding="true">
+            <constraints><grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"><preferred-size width="180" height="30"/></grid></constraints>
+            <properties/>
+          </component>
+
+          <!-- Role -->
+          <component id="lbl05" class="javax.swing.JLabel">
+            <constraints><grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/></constraints>
+            <properties><foreground color="-1"/><font size="14" style="1"/><text value="Role"/></properties>
+          </component>
+          <component id="txt05" class="javax.swing.JTextField" binding="textField5" default-binding="true">
+            <constraints><grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"><preferred-size width="180" height="30"/></grid></constraints>
+            <properties/>
+          </component>
+
+          <!-- Enrollment Date -->
+          <component id="lbl06" class="javax.swing.JLabel">
+            <constraints><grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/></constraints>
+            <properties><foreground color="-1"/><font size="14" style="1"/><text value="Enrollment Date"/></properties>
+          </component>
+          <component id="txt06" class="javax.swing.JTextField" binding="textField6" default-binding="true">
+            <constraints><grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"><preferred-size width="180" height="30"/></grid></constraints>
+            <properties/>
+          </component>
+
+          <!-- Address -->
+          <component id="lbl07" class="javax.swing.JLabel">
+            <constraints><grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/></constraints>
+            <properties><foreground color="-1"/><font size="14" style="1"/><text value="Address"/></properties>
+          </component>
+          <component id="txt07" class="javax.swing.JTextField" binding="textField7" default-binding="true">
+            <constraints><grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"><preferred-size width="180" height="30"/></grid></constraints>
+            <properties/>
+          </component>
+
+          <!-- Email -->
+          <component id="lbl08" class="javax.swing.JLabel">
+            <constraints><grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/></constraints>
+            <properties><foreground color="-1"/><font size="14" style="1"/><text value="Email"/></properties>
+          </component>
+          <component id="txt08" class="javax.swing.JTextField" binding="textField8" default-binding="true">
+            <constraints><grid row="7" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"><preferred-size width="180" height="30"/></grid></constraints>
+            <properties/>
+          </component>
+
+          <!-- Phone No -->
+          <component id="lbl09" class="javax.swing.JLabel">
+            <constraints><grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/></constraints>
+            <properties><foreground color="-1"/><font size="14" style="1"/><text value="Phone No"/></properties>
+          </component>
+          <component id="txt09" class="javax.swing.JTextField" binding="textField9" default-binding="true">
+            <constraints><grid row="8" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"><preferred-size width="180" height="30"/></grid></constraints>
+            <properties/>
+          </component>
+
+          <!-- Password -->
+          <component id="lbl10" class="javax.swing.JLabel">
+            <constraints><grid row="9" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/></constraints>
+            <properties><foreground color="-1"/><font size="14" style="1"/><text value="Password"/></properties>
+          </component>
+          <component id="txt10" class="javax.swing.JTextField" binding="textField10" default-binding="true">
+            <constraints><grid row="9" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"><preferred-size width="180" height="30"/></grid></constraints>
+            <properties/>
+          </component>
+
+          <!-- Profile Pic (filename) -->
+          <component id="lbl11" class="javax.swing.JLabel">
+            <constraints><grid row="10" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/></constraints>
+            <properties><foreground color="-1"/><font size="14" style="1"/><text value="Profile Picture"/></properties>
+          </component>
+          <component id="txt11" class="javax.swing.JTextField" binding="textField11" default-binding="true">
+            <constraints><grid row="10" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"><preferred-size width="180" height="30"/></grid></constraints>
+            <properties><editable value="false"/></properties>
+          </component>
+
+          <!-- Add Photo Button -->
+          <component id="btn01" class="javax.swing.JButton" binding="addPhotoButton" default-binding="true">
+            <constraints><grid row="11" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"><preferred-size width="-1" height="38"/></grid></constraints>
+            <properties><font size="13" style="1"/><text value="Upload Photo"/></properties>
+          </component>
+
+          <!-- Add Details Button -->
+          <component id="btn02" class="javax.swing.JButton" binding="addDetailsToProfileButton" default-binding="true">
+            <constraints><grid row="12" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"><preferred-size width="-1" height="38"/></grid></constraints>
+            <properties><font size="13" style="1"/><text value="Add Details To Profile"/></properties>
+          </component>
+
+          <!-- Clear Button -->
+          <component id="btn03" class="javax.swing.JButton" binding="clearButton" default-binding="true">
+            <constraints><grid row="13" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"><preferred-size width="-1" height="38"/></grid></constraints>
+            <properties><font size="13" style="1"/><text value="Clear"/></properties>
+          </component>
+
+          <!-- Exit Button — binding matches Java field name: exitBtn -->
+          <component id="btn04" class="javax.swing.JButton" binding="exitBtn" default-binding="true">
+            <constraints><grid row="13" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"><preferred-size width="-1" height="38"/></grid></constraints>
+            <properties><font size="13" style="1"/><text value="Exit"/></properties>
+          </component>
+
+        </children>
+      </grid>
+
+    </children>
+  </grid>
+</form>
