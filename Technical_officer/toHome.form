@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Technical_officer.toHome">
+  <grid id="root" binding="mainPanel" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="0" vgap="0">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="0" y="0" width="2000" height="890"/>
+    </constraints>
+    <properties>
+      <background color="-16776961"/>
+    </properties>
+    <border type="none"/>
+    <children>
+
+      <!-- LEFT SIDEBAR -->
+      <grid id="sidebar" layout-manager="GridLayoutManager" row-count="9" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="0" vgap="5">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="1" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="220" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-16777113"/>
+        </properties>
+        <border type="none"/>
+        <children>
+
+          <!-- Heading Panel -->
+          <grid id="headingPanelGrid" binding="headingPanel" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="20" left="10" bottom="10" right="10"/>
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-16777113"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="lbl01" class="javax.swing.JLabel" binding="stuManaSysLbl">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="Krungthep" size="16" style="1"/>
+                  <foreground color="-16776961"/>
+                  <text value="Student Management"/>
+                </properties>
+              </component>
+              <component id="lbl02" class="javax.swing.JLabel" binding="FoTLbl">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="Krungthep" size="13" style="0"/>
+                  <foreground color="-16776961"/>
+                  <text value="Faculty of Technology"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+
+          <!-- Profile Button -->
+          <component id="btn01" class="javax.swing.JButton" binding="profileButton" default-binding="true">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="-1" height="50"/>
+              </grid>
+            </constraints>
+            <properties>
+              <font size="15" style="1"/>
+              <background color="-16777113"/>
+              <foreground color="-16776961"/>
+              <text value="Profile"/>
+              <focusPainted value="false"/>
+            </properties>
+          </component>
+
+          <!-- Attendance Button -->
+          <component id="btn02" class="javax.swing.JButton" binding="attendanceButton" default-binding="true">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="-1" height="50"/>
+              </grid>
+            </constraints>
+            <properties>
+              <font size="15" style="1"/>
+              <background color="-16777113"/>
+              <foreground color="-16776961"/>
+              <text value="Attendance"/>
+              <focusPainted value="false"/>
+            </properties>
+          </component>
+
+          <!-- Medical Button -->
+          <component id="btn03" class="javax.swing.JButton" binding="medicalButton" default-binding="true">
+            <constraints>
+              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="-1" height="50"/>
+              </grid>
+            </constraints>
+            <properties>
+              <font size="15" style="1"/>
+              <background color="-16777113"/>
+              <foreground color="-16776961"/>
+              <text value="Medical"/>
+              <focusPainted value="false"/>
+            </properties>
+          </component>
+
+          <!-- Timetable Button -->
+          <component id="btn04" class="javax.swing.JButton" binding="timeTableButton" default-binding="true">
+            <constraints>
+              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="-1" height="50"/>
+              </grid>
+            </constraints>
+            <properties>
+              <font size="15" style="1"/>
+              <background color="-16777113"/>
+              <foreground color="-16776961"/>
+              <text value="Time Table"/>
+              <focusPainted value="false"/>
+            </properties>
+          </component>
+
+          <!-- Notice Button -->
+          <component id="btn05" class="javax.swing.JButton" binding="noticeButton" default-binding="true">
+            <constraints>
+              <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="-1" height="50"/>
+              </grid>
+            </constraints>
+            <properties>
+              <font size="15" style="1"/>
+              <background color="-16777113"/>
+              <foreground color="-16776961"/>
+              <text value="Notice"/>
+              <focusPainted value="false"/>
+            </properties>
+          </component>
+
+          <!-- Spacer -->
+          <vspacer id="vsp01">
+            <constraints>
+              <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
+
+          <!-- Btn Panel (holds logout) -->
+          <grid id="btnPanelGrid" binding="btnPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="5" left="5" bottom="10" right="5"/>
+            <constraints>
+              <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-16777113"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="btn06" class="javax.swing.JButton" binding="logOutButton" default-binding="true">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="-1" height="45"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <font size="14" style="1"/>
+                  <background color="-16744273"/>
+                  <foreground color="-16777216"/>
+                  <text value="Log Out"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+
+        </children>
+      </grid>
+
+      <!-- RIGHT CARD PANEL -->
+      <grid id="cardMain" binding="cardMainPanel" layout-manager="CardLayout" hgap="0" vgap="0">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-16776961"/>
+        </properties>
+        <border type="none"/>
+        <children>
+
+          <!-- ===== PROFILE CARD ===== -->
+          <grid id="profileCardGrid" binding="profileCard" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="10" vgap="10">
+            <margin top="30" left="30" bottom="30" right="30"/>
+            <constraints>
+              <card name="profileCard"/>
+            </constraints>
+            <properties>
+              <background color="-16776961"/>
+            </properties>
+            <border type="none"/>
+            <children>
+
+              <!-- Detail Panel -->
+              <grid id="detailPanelGrid" binding="detailPanel" layout-manager="GridLayoutManager" row-count="9" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="8" vgap="8">
+                <margin top="20" left="20" bottom="20" right="20"/>
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-16777113"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="lbl10" class="javax.swing.JLabel" binding="profileHeadingLbl">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <font name="Krungthep" size="28" style="1"/>
+                      <foreground color="-16776961"/>
+                      <text value="My Profile"/>
+                    </properties>
+                  </component>
+                  <component id="lbl11" class="javax.swing.JLabel" binding="fNameLbl">
+                    <constraints>
+                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties><font size="15" style="1"/><foreground color="-16776961"/><text value="First Name"/></properties>
+                  </component>
+                  <component id="txt11" class="javax.swing.JTextField" binding="fNameTxt" default-binding="true">
+                    <constraints>
+                      <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"><preferred-size width="200" height="32"/></grid>
+                    </constraints>
+                    <properties><editable value="false"/></properties>
+                  </component>
+                  <component id="lbl12" class="javax.swing.JLabel" binding="lNameLbl">
+                    <constraints>
+                      <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties><font size="15" style="1"/><foreground color="-16776961"/><text value="Last Name"/></properties>
+                  </component>
+                  <component id="txt12" class="javax.swing.JTextField" binding="lNameTxt" default-binding="true">
+                    <constraints>
+                      <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"><preferred-size width="200" height="32"/></grid>
+                    </constraints>
+                    <properties><editable value="false"/></properties>
+                  </component>
+                  <component id="lbl13" class="javax.swing.JLabel" binding="addressLbl">
+                    <constraints>
+                      <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties><font size="15" style="1"/><foreground color="-16776961"/><text value="Address"/></properties>
+                  </component>
+                  <component id="txt13" class="javax.swing.JTextField" binding="addressTxt" default-binding="true">
+                    <constraints>
+                      <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"><preferred-size width="200" height="32"/></grid>
+                    </constraints>
+                    <properties><editable value="false"/></properties>
+                  </component>
+                  <component id="lbl14" class="javax.swing.JLabel" binding="emailLbl">
+                    <constraints>
+                      <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties><font size="15" style="1"/><foreground color="-16776961"/><text value="Email"/></properties>
+                  </component>
+                  <component id="txt14" class="javax.swing.JTextField" binding="emailTxt" default-binding="true">
+                    <constraints>
+                      <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"><preferred-size width="200" height="32"/></grid>
+                    </constraints>
+                    <properties><editable value="false"/></properties>
+                  </component>
+                  <component id="lbl15" class="javax.swing.JLabel" binding="pNoLbl">
+                    <constraints>
+                      <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties><font size="15" style="1"/><foreground color="-16776961"/><text value="Phone No"/></properties>
+                  </component>
+                  <component id="txt15" class="javax.swing.JTextField" binding="pNoTxt" default-binding="true">
+                    <constraints>
+                      <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"><preferred-size width="200" height="32"/></grid>
+                    </constraints>
+                    <properties><editable value="false"/></properties>
+                  </component>
+                  <component id="lbl16" class="javax.swing.JLabel" binding="roleLbl">
+                    <constraints>
+                      <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties><font size="15" style="1"/><foreground color="-16776961"/><text value="Role"/></properties>
+                  </component>
+                  <component id="txt16" class="javax.swing.JTextField" binding="roleTxt" default-binding="true">
+                    <constraints>
+                      <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"><preferred-size width="200" height="32"/></grid>
+                    </constraints>
+                    <properties><editable value="false"/></properties>
+                  </component>
+                  <component id="btn17" class="javax.swing.JButton" binding="updateProfileButton" default-binding="true">
+                    <constraints>
+                      <grid row="7" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"><preferred-size width="-1" height="42"/></grid>
+                    </constraints>
+                    <properties>
+                      <font size="14" style="1"/>
+                      <background color="-16744273"/>
+                      <foreground color="-16777216"/>
+                      <text value="Update Profile"/>
+                    </properties>
+                  </component>
+                  <component id="btn18" class="javax.swing.JButton" binding="deleteProfilePictureButton" default-binding="true">
+                    <constraints>
+                      <grid row="8" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"><preferred-size width="-1" height="42"/></grid>
+                    </constraints>
+                    <properties>
+                      <font size="14" style="1"/>
+                      <background color="-65536"/>
+                      <foreground color="-1"/>
+                      <text value="Delete Profile Picture"/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+
+              <!-- Image Panel -->
+              <grid id="imgMainPanelGrid" binding="imgMainPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="20" left="20" bottom="20" right="20"/>
+                <constraints>
+                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties><background color="-16776961"/></properties>
+                <border type="none"/>
+                <children>
+                  <grid id="imgPanelGrid" binding="imgPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="10" left="10" bottom="10" right="10"/>
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"><preferred-size width="200" height="200"/></grid>
+                    </constraints>
+                    <properties><background color="-16777113"/></properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="lbl20" class="javax.swing.JLabel" binding="imageLbl">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"><preferred-size width="150" height="150"/></grid>
+                        </constraints>
+                        <properties><text value=""/></properties>
+                      </component>
+                    </children>
+                  </grid>
+                </children>
+              </grid>
+
+            </children>
+          </grid>
+
+          <!-- ===== ATTENDANCE CARD ===== -->
+          <grid id="attendanceCardGrid" binding="attendanceCard" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="10" vgap="10">
+            <margin top="30" left="30" bottom="30" right="30"/>
+            <constraints>
+              <card name="attendanceCard"/>
+            </constraints>
+            <properties><background color="-16776961"/></properties>
+            <border type="none"/>
+            <children>
+              <component id="lbl30" class="javax.swing.JLabel" binding="headingLabel">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties><font name="Krungthep" size="28" style="1"/><foreground color="-16777113"/><text value="Attendance"/></properties>
+              </component>
+              <!-- View Panel (table injected at runtime) -->
+              <grid id="viewPanelGrid" binding="viewPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"><preferred-size width="600" height="350"/></grid>
+                </constraints>
+                <properties><background color="-1"/></properties>
+                <border type="none"/>
+                <children/>
+              </grid>
+              <!-- Buttons Panel -->
+              <grid id="buttonsPanelGrid" binding="buttons" layout-manager="GridLayoutManager" row-count="1" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="10" vgap="-1">
+                <margin top="5" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"><preferred-size width="-1" height="48"/></grid>
+                </constraints>
+                <properties><background color="-16776961"/></properties>
+                <border type="none"/>
+                <children>
+                  <component id="btn31" class="javax.swing.JButton" binding="add" default-binding="true">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties><font size="14" style="1"/><background color="-16777113"/><foreground color="-16776961"/><text value="Add"/></properties>
+                  </component>
+                  <component id="btn32" class="javax.swing.JButton" binding="update" default-binding="true">
+                    <constraints>
+                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties><font size="14" style="1"/><background color="-16777113"/><foreground color="-16776961"/><text value="Update"/></properties>
+                  </component>
+                  <component id="btn33" class="javax.swing.JButton" binding="delete" default-binding="true">
+                    <constraints>
+                      <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties><font size="14" style="1"/><background color="-65536"/><foreground color="-1"/><text value="Delete"/></properties>
+                  </component>
+                </children>
+              </grid>
+            </children>
+          </grid>
+
+          <!-- ===== MEDICAL CARD ===== -->
+          <grid id="medicalCardGrid" binding="medicalCard" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="10" vgap="10">
+            <margin top="30" left="30" bottom="30" right="30"/>
+            <constraints>
+              <card name="medicalCard"/>
+            </constraints>
+            <properties><background color="-16776961"/></properties>
+            <border type="none"/>
+            <children>
+              <component id="lbl40" class="javax.swing.JLabel" binding="heading">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties><font name="Krungthep" size="28" style="1"/><foreground color="-16777113"/><text value="Medical"/></properties>
+              </component>
+              <!-- View Panel for medical (table injected at runtime) -->
+              <grid id="viewMedicalGrid" binding="view" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"><preferred-size width="600" height="350"/></grid>
+                </constraints>
+                <properties><background color="-1"/></properties>
+                <border type="none"/>
+                <children/>
+              </grid>
+              <!-- Button Panel for medical -->
+              <grid id="buttonPanelGrid" binding="buttonPanel" layout-manager="GridLayoutManager" row-count="1" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="10" vgap="-1">
+                <margin top="5" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"><preferred-size width="-1" height="48"/></grid>
+                </constraints>
+                <properties><background color="-16776961"/></properties>
+                <border type="none"/>
+                <children>
+                  <component id="btn41" class="javax.swing.JButton" binding="addbtn" default-binding="true">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties><font size="14" style="1"/><background color="-16777113"/><foreground color="-16776961"/><text value="Add"/></properties>
+                  </component>
+                  <component id="btn42" class="javax.swing.JButton" binding="updatebtn" default-binding="true">
+                    <constraints>
+                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties><font size="14" style="1"/><background color="-16777113"/><foreground color="-16776961"/><text value="Update"/></properties>
+                  </component>
+                  <component id="btn43" class="javax.swing.JButton" binding="deletebtn" default-binding="true">
+                    <constraints>
+                      <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties><font size="14" style="1"/><background color="-65536"/><foreground color="-1"/><text value="Delete"/></properties>
+                  </component>
+                </children>
+              </grid>
+            </children>
+          </grid>
+
+          <!-- ===== TIMETABLE CARD ===== -->
+          <grid id="timeTableCardGrid" binding="timeTableCard" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="10" vgap="10">
+            <margin top="30" left="30" bottom="30" right="30"/>
+            <constraints>
+              <card name="timeTableCard"/>
+            </constraints>
+            <properties><background color="-16776961"/></properties>
+            <border type="none"/>
+            <children>
+              <component id="lbl50" class="javax.swing.JLabel" binding="timeTableHeadingLbl">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties><font name="Krungthep" size="28" style="1"/><foreground color="-16777113"/><text value="Time Table"/></properties>
+              </component>
+              <grid id="timeTablePanelGrid" binding="timeTablePanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"><preferred-size width="600" height="400"/></grid>
+                </constraints>
+                <properties><background color="-1"/></properties>
+                <border type="none"/>
+                <children>
+                  <scrollpane id="sp50" binding="timeTableScrollPane">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <component id="tbl50" class="javax.swing.JTable" binding="timeTableTable">
+                        <constraints/>
+                        <properties><rowHeight value="35"/></properties>
+                      </component>
+                    </children>
+                  </scrollpane>
+                </children>
+              </grid>
+            </children>
+          </grid>
+
+          <!-- ===== NOTICE CARD ===== -->
+          <grid id="noticeCardGrid" binding="noticeCard" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="10" vgap="10">
+            <margin top="30" left="30" bottom="30" right="30"/>
+            <constraints>
+              <card name="noticeCard"/>
+            </constraints>
+            <properties><background color="-16776961"/></properties>
+            <border type="none"/>
+            <children>
+              <component id="lbl60" class="javax.swing.JLabel" binding="noticeHeadingLbl">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties><font name="Krungthep" size="28" style="1"/><foreground color="-16777113"/><text value="Notice Board"/></properties>
+              </component>
+              <grid id="selectRow" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="10" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"><preferred-size width="-1" height="40"/></grid>
+                </constraints>
+                <properties><background color="-16776961"/></properties>
+                <border type="none"/>
+                <children>
+                  <component id="lbl61" class="javax.swing.JLabel" binding="selectTitleLbl">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties><font size="15" style="1"/><foreground color="-16777113"/><text value="Select Title :"/></properties>
+                  </component>
+                  <component id="combo61" class="javax.swing.JComboBox" binding="selectTitleCombo" default-binding="true">
+                    <constraints>
+                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"><preferred-size width="300" height="35"/></grid>
+                    </constraints>
+                    <properties/>
+                  </component>
+                </children>
+              </grid>
+              <grid id="noticeTxtAreaPanelGrid" binding="noticeTxtAreaPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"><preferred-size width="600" height="350"/></grid>
+                </constraints>
+                <properties><background color="-1"/></properties>
+                <border type="none"/>
+                <children>
+                  <scrollpane id="sp61" binding="noticeScrollPane">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <component id="ta61" class="javax.swing.JTextArea" binding="noticeTxtArea" default-binding="true">
+                        <constraints/>
+                        <properties><editable value="false"/><font size="14"/><lineWrap value="true"/><wrapStyleWord value="true"/></properties>
+                      </component>
+                    </children>
+                  </scrollpane>
+                </children>
+              </grid>
+            </children>
+          </grid>
+
+        </children>
+      </grid>
+
+    </children>
+  </grid>
+</form>
